@@ -1,0 +1,93 @@
+.contact-bar {
+    display: felx;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.contact-bar .left,
+.contact-bar .center,
+.contact-bar .right {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-bar .left {
+    text-align: left;
+}
+
+.contact-bar .center {
+    text-align: center;
+}
+
+.contact-bar .right {
+    text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color:aqua;
+}
+
+html, body {
+    margin:0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 0px;
+    background-color:black;
+    font-family: sans-serif;
+    color:lime;
+    text-align: center;
+}
+
+.resume-container {
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin-top: 30px;
+    max-width: 1200px;
+    text-align: center;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+a {
+    color:lime;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color:blue;
+}
+
+.experience-education-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+}
+
+.experience-education-container section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    box-sizing: border-box;
+}
+
