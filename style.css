@@ -26,7 +26,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color:aqua;
+    color:white;
 }
 
 html, body {
@@ -43,7 +43,7 @@ html, body {
 
 .resume-container {
     max-width: 1200px;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
 }
 
@@ -72,10 +72,6 @@ a:hover {
     text-decoration: none;
 }
 
-a:visited {
-    color:blue;
-}
-
 .experience-education-container {
     display: flex;
     justify-content: space-between;
@@ -89,5 +85,13 @@ a:visited {
     min-width: 300px;
     max-width: 45%;
     box-sizing: border-box;
+}
+
+#resume {
+    margin-bottom: 100px;
+}
+
+h3 {
+    font-size: small;
 }
 
