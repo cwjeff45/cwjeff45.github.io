@@ -70,7 +70,9 @@ if (toggleBtn) {
 // Secret code check
 function checkCode() {
     const input = document.getElementById("secretInput").value.trim().toLowerCase();
-    const secretCode = "unity";
+
+    const encoded = "dW5pdHk=";
+    const secretCode = atob(encoded)
 
     if (input === secretCode) {
         window.location.href = "final-error.html";
