@@ -1,24 +1,49 @@
-/* General Reset and Base Styles */
+/* ============================
+   Root Variables & Themes
+============================ */
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: lime;
+}
+
+body.light-mode {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #007acc;
+}
+
+/* ============================
+   Base Styles
+============================ */
 body {
     margin: 0;
     padding: 0;
     height: auto;
     min-height: 100%;
     display: block;
-    background-color: black;
+    overflow-x: hidden;
     font-family: Consolas, monospace;
-    color: lime;
+    background-color: var(--bg-color);
+    color: var(--accent-color);
     text-align: center;
 }
 
-body {
-    overflow-x: hidden;
-}
-
-/* Typography */
+/* ============================
+   Typography
+============================ */
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: white;
+}
+
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode h4,
+body.light-mode h5,
+body.light-mode h6 {
+    color: black;
 }
 
 h3 {
@@ -26,7 +51,7 @@ h3 {
 }
 
 a {
-    color: lime;
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -35,7 +60,9 @@ a:hover {
     text-decoration: none;
 }
 
-/* Layout Containers */
+/* ============================
+   Containers & Layout
+============================ */
 .page-container,
 .resume-container {
     max-width: 1000px;
@@ -51,21 +78,20 @@ header,
 footer,
 ul,
 li {
-    background-color: transparent;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     position: relative;
     z-index: 1;
 }
 
-/* Sections */
 section {
     margin-top: 30px;
     max-width: 1200px;
     padding: 5px;
-    text-align: center;
     background-color: transparent;
+    text-align: center;
 }
 
-/* Lists */
 ul {
     list-style-type: disc;
     padding-left: 20px;
@@ -74,12 +100,38 @@ ul {
     max-width: 600px;
 }
 
-/* Resume Margin */
 #resume {
     margin-bottom: 100px;
 }
 
-/* Matrix Canvas */
+/* ============================
+   Theme Toggle Button
+============================ */
+.theme-toggle-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#toggle-theme {
+    background-color: #111;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 6px 12px;
+    font-family: Consolas, monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+}
+
+#toggle-theme:hover {
+    background-color: #222;
+}
+
+/* ============================
+   Matrix Canvas and Button
+============================ */
 #matrixCanvas {
     display: none;
     position: fixed;
@@ -92,7 +144,6 @@ ul {
     background-color: transparent;
 }
 
-/* Matrix Toggle Button */
 #toggleMatrix {
     position: fixed;
     top: 10px;
@@ -112,7 +163,9 @@ ul {
     background-color: #222;
 }
 
-/* Secret Box */
+/* ============================
+   Secret Code Box
+============================ */
 #secret_box {
     width: 100%;
     display: flex;
@@ -148,7 +201,9 @@ ul {
     margin: 0;
 }
 
-/* Contact Bar */
+/* ============================
+   Contact Bar
+============================ */
 .contact-bar {
     display: flex;
     justify-content: space-between;
@@ -156,22 +211,21 @@ ul {
     padding: 10px;
 }
 
-.contact-bar .left,
-.contact-bar .center,
-.contact-bar .right {
-    flex: 1;
-    text-align: center;
-}
-
 .contact-bar .left {
     text-align: left;
+}
+
+.contact-bar .center {
+    text-align: center;
 }
 
 .contact-bar .right {
     text-align: right;
 }
 
-/* Experience & Education Layout */
+/* ============================
+   Experience & Education Layout
+============================ */
 .experience-education-container {
     display: flex;
     justify-content: space-between;
@@ -187,6 +241,9 @@ ul {
     box-sizing: border-box;
 }
 
+/* ============================
+   Secret Hover Text
+============================ */
 .default-text {
     display: inline;
 }
@@ -202,5 +259,31 @@ ul {
 
 #secretCode:hover .hover-text {
     display: inline;
+}
+
+.secret-hover {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hidden-text {
+  color: transparent;
+  transition: color 0.3s ease;
+  font-size: 1.2em;
+  user-select: none;
+}
+
+.secret-hover:hover .hidden-text {
+  color: #0f0;
+}
+
+/* NEW: Position the secret toward the right */
+.right-secret {
+  position: absolute;
+  right: 40px;
+  top: 60%; /* adjust up/down as needed */
+  transform: translateY(-50%);
 }
 

@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const secretEl = document.getElementById("secretCode");
     const defaultSpan = secretEl.querySelector(".default-text");
+    const hoverSpan = secretEl.querySelector(".hover-text");
 
     defaultSpan.textContent = decoded;
     secretEl.style.display = "block";
