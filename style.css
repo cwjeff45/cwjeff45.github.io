@@ -186,3 +186,21 @@ ul {
     max-width: 45%;
     box-sizing: border-box;
 }
+
+.default-text {
+    display: inline;
+}
+
+.hover-text {
+    display: none;
+    color: #0f0;
+}
+
+#secretCode:hover .default-text {
+    display: none;
+}
+
+#secretCode:hover .hover-text {
+    display: inline;
+}
+
