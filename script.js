@@ -151,5 +151,7 @@ function activateMatrix() {
 window.onload = () => {
   if (localStorage.getItem("matrixUnlocked") === "true") {
     unlockMatrix();
+  } else {
+    document.getElementById("toggleMatrix").style.display = "none";
   }
 };
