@@ -109,3 +109,47 @@ function checkCode() {
 }
 
 window.checkCode = checkCode;
+
+
+// =============================
+// Easter Egg Check Code
+// =============================
+
+const correctCode = "6327"
+
+function checkSubmit() {
+  const input = document.getElementById("code-input").value;
+  if (input === correctCode) {
+    localStorage.setItem("matrixUnlocked", "true");
+    localStorage.setItem("matrixAlertShown", "false");
+    unlockMatrix();
+    alert("Matrix Mode Unlocked!");
+    localStorage.setitem("matrixAlertShown", "true");
+  } else {
+    alert("Incorrect code. Try again!")
+  }
+}
+
+function unlockMatrix() {
+  document.getElementById("clue-box").style.display = "none";
+  document.getElementById("toggleMatrix").style.display = "inline-block";
+}
+
+function activateMatrix() {
+  // alert("Matrix Mode Unlocked!");
+  localStorage.setItem("matrixAlertShown", "true");
+
+  if (!alreadyAlerted) {
+    alert("Matrix Mode Unlocked!");
+    localStorage.setItem("matrixAlertShown", "true");
+  }
+
+  const toggleMatrix = document.getElementById("toggle-matrix");
+  if (toggleMatrix) toggleMatrix.click();
+}
+
+window.onload = () => {
+  if (localStorage.getItem("matrixUnlocked") === "true") {
+    unlockMatrix();
+  }
+};

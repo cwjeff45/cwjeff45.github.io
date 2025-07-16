@@ -10,7 +10,20 @@
     <!-- test push for webpage-->
     <canvas id="matrixCanvas" style="display: none;"></canvas>
 
-    <button id="toggleMatrix">Matrix Style</button>
+    <!--Easter Egg Box-->
+    <div id="clue-box">
+        <h4> Enter 4-Digit PIN</h4>
+        <ul>
+            <li> 1: Years in the Air Force</li>
+            <li> 2: Schools listed</li>
+            <li> 3: How many children I have</li>
+            <li> 4: How many languages/conepts I have studied</li>
+        </ul>
+        <input type="text" id="code-input" maxlength="4" placeholder="0000" />
+        <button onclick="checkSubmit()">Submit</button>
+    </div>
+
+    <button id="toggleMatrix" style="display: none;" onclick="activateMatrix()">Matrix Style</button>
 
     <div class="page-container">
         <header>
@@ -49,11 +62,13 @@
                     <li><a href="assets/projects.zip" download>Download Toolbox App</a></li> > App with various IT tools built in one convenient space.
                     <li><a href="assets/pypzl_game.zip" download>Download PYPZL</a></li> > Good luck getting through this game... 
                     <li><a href="assets/TaskListCustom.exe" download> Download Task List</a></li> > Task tracker with editable notes and statuses.
-                    <li><a href="assets/Discord_Photo_Bot.txt" download>Download Discord Photo Bot</a> > Discord bot that can be configured to post photos from a local library
+                    <li><a href="assets/Discord_Photo_Bot.txt" download>Download Discord Photo Bot</a></li>
+                         > Discord bot that can be configured to post photos from a local library
                     to a specific channel at designated times. *(Due to uptime issues, I currently run this bot on a locally hosted server. This download 
-                    requires configuration and setup.)*</li>
-                    <li><a href="assets/Plane_time.py" download> Download 'Plane Time'</a>Script that displays a plane at the bottom of your screen that starts at 8AM and 'flies' til 5PM
-                    helping time fly while at work!</li>
+                    requires configuration and setup.)*
+                    <li><a href="assets/Plane_time.py" download> Download 'Plane Time'</a></li>
+                         > Script that displays a plane at the bottom of your screen that starts at 8AM and 'flies' til 5PM
+                    helping time fly while at work!
                 </ul>
             </section>
 

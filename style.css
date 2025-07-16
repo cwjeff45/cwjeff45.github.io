@@ -129,6 +129,34 @@ ul {
     background-color: #222;
 }
 
+/* ===========================
+    Easter Egg
+    =======================*/
+
+#clue-box {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #111;
+  color: #0f0;
+  padding: 15px;
+  border: 2px solid #0f0;
+  font-family: monospace;
+  z-index: 999;
+  width: 200px;
+}
+
+#code-input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 4px;
+  font-family: monospace;
+  background: black;
+  color: lime;
+  border: 1px solid #0f0;
+}
+
+
 /* ============================
    Matrix Canvas and Button
 ============================ */
