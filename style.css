@@ -17,6 +17,10 @@ body.light-mode {
     color: lime;
 }
 
+body.light-mode a:hover {
+    color: black;
+}
+
 /* ============================
    Base Styles
 ============================ */
