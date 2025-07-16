@@ -25,12 +25,14 @@
 
         <section>
             <h2>Summary</h2>
-            <p>As an aspiring software developer, I have studied various subjects and languages over the years. I am currently 
+            <p id="resume-summary">
+                As an aspiring software developer, I have studied various subjects and languages over the years. I am currently 
                 working as network / IT technician for a local company that has really opened my eyes to all 
                 of the possibilities and avenues that IT has to offer. I love creating Python scripts for 
                 daily automation and for simple games and mess around with Arduino projects when an idea comes to mind. I am most confident
                 using Python, but have recently been studying networking, C, JavaScript, HTML, PHP, CSS, and SQL. This webpage is my first attempt
-                at utilizing everything I have spent so long researching to try and create something personal, yet professional. 
+                at utilizing everything I have spent so long researching to try and create something personal, yet professional. Please visit my Github
+                or LinkedIn to leave any feedback and thank you for visiting!
             </p>
         </section>
 
@@ -116,6 +118,13 @@
             <p>&copy; 2025 Colten Jeffress</p>
         </footer>
     <script src="script.js"></script>
+    <script>
+    const summaryEl = document.getElementById("resume-summary");
+    if (summaryEl) {
+        const summaryText = summaryEl.textContent.trim();
+        typeTextOnce("resume-summary", summaryText);
+    }
+    </script>
 </body>
 
 </html>

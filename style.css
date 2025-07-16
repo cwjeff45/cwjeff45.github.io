@@ -315,3 +315,25 @@ ul {
   transform: translateY(-50%);
 }
 
+/* =====================
+/* Summary type in
+===================== */
+
+#resume-summary {
+  font-family: Consolas, monospace;
+  color: var(--accent-color);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  white-space: normal;
+  text-align: left;
+}
+
+.cursor {
+    animation: blink ls step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}

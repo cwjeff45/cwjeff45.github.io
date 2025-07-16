@@ -124,15 +124,23 @@ function checkSubmit() {
     localStorage.setItem("matrixAlertShown", "false");
     unlockMatrix();
     alert("Matrix Mode Unlocked!");
-    localStorage.setitem("matrixAlertShown", "true");
+    localStorage.setItem("matrixAlertShown", "true");
   } else {
     alert("Incorrect code. Try again!")
   }
 }
 
 function unlockMatrix() {
-  document.getElementById("clue-box").style.display = "none";
-  document.getElementById("toggleMatrix").style.display = "inline-block";
+  const clueBox = document.getElementById("clue-box");
+  const matrixBtn = document.getElementById("toggleMatrix");
+
+  if (clueBox) {
+    clueBox.style.display = "none";
+  }
+
+  if (matrixBtn) {
+    matrixBtn.style.display = "inline-block";
+  }
 }
 
 function activateMatrix() {
@@ -152,6 +160,34 @@ window.onload = () => {
   if (localStorage.getItem("matrixUnlocked") === "true") {
     unlockMatrix();
   } else {
-    document.getElementById("toggleMatrix").style.display = "none";
+    const toggleMatrixBtn = document.getElementById("toggleMatrix");
+    if (toggleMatrixBtn) toggleMatrixBtn.style.display = "none";
   }
 };
+
+// Typing Effect
+function typeTextOnce(elementId, text, speed = 30) {
+  let i = 0;
+  const el = document.getElementById(elementId);
+
+  const cleanText = text.replace(/\s*\n\s*/g, " ");
+
+  function typeChar() {
+    if (i < cleanText.length) {
+      el.textContent += cleanText.charAt(i);
+      i ++;
+      setTimeout(typeChar, speed);
+    }
+    if (i >= cleanText.length) {
+      el.innerHTML += '<span class="cursor">▌</span>';
+    }
+  }
+
+  if (localStorage.getItem("summaryTyped") === "true") {
+    el.textContent = cleanText; 
+  } else {
+    el.textContent = "";
+    typeChar();
+    localStorage.setItem("summaryTyped", "true");
+  }
+}
