@@ -337,3 +337,21 @@ ul {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
 }
+
+.resume-link {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    background-color: var(--accent-color);
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.resume-link:hover {
+    transform: scale(1.05);
+    background-color: white;
+}
